@@ -20,7 +20,7 @@ const posts = [
 
 export default function PostGallery() {
   return (
-    <div className="relative overflow-hidden w-full h-full pb-20 pt-5">
+    <div className="relative overflow-hidden w-full h-full pb-20 ">
       <Carousel slides={posts} />
     </div>
   );

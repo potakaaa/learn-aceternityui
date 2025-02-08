@@ -1,6 +1,5 @@
 import { Spotlight } from "@/components/ui/spotlight-new";
 import DevTooltip from "./components/DevTooltip";
-import Parallax from "./components/Parallax";
 import PostGallery from "./components/PostGallery";
 import ReviewCards from "./components/ReviewCards";
 

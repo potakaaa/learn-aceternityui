@@ -2,6 +2,7 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 import DevTooltip from "./components/DevTooltip";
 import PostGallery from "./components/PostGallery";
 import ReviewCards from "./components/ReviewCards";
+import PostsGrid from "./components/PostsGrid";
 
 export default function page() {
   return (
@@ -19,6 +20,7 @@ export default function page() {
         </div>
       </section>
       <PostGallery />
+      <PostsGrid />
       <ReviewCards />
       <section className="flex flex-col justify-center items-center space-y-3 w-full">
         <p className="text-primary-foreground text-center self-center font-medium">

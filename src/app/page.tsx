@@ -4,6 +4,7 @@ import PostGallery from "./components/PostGallery";
 import ReviewCards from "./components/ReviewCards";
 import PostsGrid from "./components/PostsGrid";
 import PostButton from "./components/PostButton";
+import { ModeToggle } from "@/components/theme-toggle";
 
 export default function page() {
   return (
@@ -11,15 +12,16 @@ export default function page() {
       <section className="h-full my-20">
         <Spotlight />
         <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
-          <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text h-20">
+          <h1 className="text-4xl md:text-7xl font-bold text-center h-20">
             My Dogs'
           </h1>
-          <p className="mt-4 font-normal text-base text-zinc-700 max-w-lg text-center mx-auto">
+          <p className="mt-4 font-normal text-base max-w-lg text-center mx-auto">
             This is a sample website for my dogs. I love my dogs. They are my
             bestfriend, my companion, and my love.
           </p>
         </div>
       </section>
+      <ModeToggle />
       <PostGallery />
       <PostsGrid />
       <PostButton />

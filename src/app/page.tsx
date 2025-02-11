@@ -5,8 +5,8 @@ import ReviewCards from "./components/ReviewCards";
 import PostsGrid from "./components/PostsGrid";
 import PostButton from "./components/PostButton";
 import { ModeToggle } from "@/components/theme-toggle";
-import { StickyScrollSample } from "./components/StickyScroll";
 import { Scroll } from "./components/Scroll";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -23,9 +23,7 @@ export default function page() {
           </p>
         </div>
       </section>
-      {/* <Link to={"/framer"} className="text-primary-foreground">
-        Go to Framer Practice
-      </Link> */}
+      <Link href="/framer">Go to Motion Practice</Link>
       <ModeToggle />
       <Scroll />
       <PostGallery />

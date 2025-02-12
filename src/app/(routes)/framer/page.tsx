@@ -96,7 +96,14 @@ const page = () => {
         <motion.div
           variants={dissolve}
           className="bg-foreground bg-opacity-50 aspect-square rounded-lg justify-center flex items-center gap-10 size-64"
-        ></motion.div>
+        >
+          <motion.div
+            className="bg-fuchsia-500 rounded-xl shadow-md size-1/3 cursor-grab"
+            drag
+            dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+          ></motion.div>
+        </motion.div>
         <motion.div
           variants={dissolve}
           className="bg-foreground bg-opacity-50 aspect-square rounded-lg justify-center flex items-center gap-10 size-64"

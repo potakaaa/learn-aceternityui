@@ -1,3 +1,5 @@
+"use client";
+
 import { Spotlight } from "@/components/ui/spotlight-new";
 import DevTooltip from "./components/DevTooltip";
 import PostGallery from "./components/PostGallery";
@@ -7,10 +9,18 @@ import PostButton from "./components/PostButton";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Scroll } from "./components/Scroll";
 import Link from "next/link";
+import { motion, useScroll } from "framer-motion";
 
 export default function page() {
+  const { scrollYProgress } = useScroll();
   return (
     <div className="w-full min-h-screen bg-background flex justify-center items-center flex-col overflow-x-hidden space-y-10 py-10 antialiased relative">
+      <div className="h-56 w-10 rounded-xl bg-rose-200 fixed top-10 right-10 bg-opacity-70 shadow-md overflow-hidden z-10">
+        <motion.div
+          className="bg-rose-500 h-full w-full rounded-xl bg-opacity-75 origin-bottom"
+          style={{ scaleY: scrollYProgress }}
+        ></motion.div>
+      </div>
       <section className="h-full my-20">
         <Spotlight />
         <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
@@ -24,6 +34,7 @@ export default function page() {
         </div>
       </section>
       <Link href="/framer">Go to Motion Practice</Link>
+
       <ModeToggle />
       <Scroll />
       <PostGallery />

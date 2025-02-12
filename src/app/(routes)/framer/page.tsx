@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import { useEffect } from "react";
 
 const dissolveParent = {
   hidden: { opacity: 0 },
@@ -20,6 +21,11 @@ const dissolve = {
 };
 
 const page = () => {
+  const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    console.log(scrollYProgress);
+  }, [scrollYProgress]);
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
       <motion.section
@@ -94,6 +100,7 @@ const page = () => {
           </motion.button>
         </motion.div>
         <motion.div
+          id="draggable"
           variants={dissolve}
           className="bg-foreground bg-opacity-50 aspect-square rounded-lg justify-center flex items-center gap-10 size-64"
         >
@@ -107,7 +114,14 @@ const page = () => {
         <motion.div
           variants={dissolve}
           className="bg-foreground bg-opacity-50 aspect-square rounded-lg justify-center flex items-center gap-10 size-64"
-        ></motion.div>
+        >
+          <div className="bg-teal-200 w-20 h-28 rounded-lg">
+            <motion.div
+              className="w-full h-full bg-teal-500 rounded-lg origin-bottom"
+              style={{ scaleY: scrollYProgress }}
+            ></motion.div>
+          </div>
+        </motion.div>
         <motion.div
           variants={dissolve}
           className="bg-foreground bg-opacity-50 aspect-square rounded-lg justify-center flex items-center gap-10 size-64"

@@ -15,7 +15,7 @@ export default function page() {
   const { scrollYProgress } = useScroll();
   return (
     <div className="w-full min-h-screen bg-background flex justify-center items-center flex-col overflow-x-hidden space-y-10 py-10 antialiased relative">
-      <div className="h-56 w-10 rounded-xl bg-rose-200 fixed top-10 right-10 bg-opacity-70 shadow-md overflow-hidden z-10">
+      <div className="h-56 w-4 rounded-full bg-rose-200 fixed top-10 right-10 bg-opacity-70 shadow-md overflow-hidden z-10">
         <motion.div
           className="bg-rose-500 h-full w-full rounded-xl bg-opacity-75 origin-bottom"
           style={{ scaleY: scrollYProgress }}
